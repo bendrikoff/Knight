@@ -6,6 +6,5 @@ public class EntityMoveBehaviour : MonoBehaviour,IMoveable
 {
     public void Move(){
 
-        return;
     }
 }
