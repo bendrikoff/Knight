@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EntityMoveBehaviour : MonoBehaviour,IMoveable
 {
-    public void Move(){
-
-        return;
+    public void Move()
+    {
     }
 }
