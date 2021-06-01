@@ -15,6 +15,7 @@ public class CameraControl : MonoBehaviour
         _camera=GetComponent<Camera>();
     }
 
+    // HYI
 
     void Update()
     {
