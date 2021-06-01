@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IMoveable 
 {
-    void Move();
+    public void Move();
 }

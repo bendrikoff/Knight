@@ -12,12 +12,14 @@ public class PlayerMoveBehaviour: IMoveable
 
 
 
-    public PlayerMoveBehaviour(GameObject player){
+    public PlayerMoveBehaviour(GameObject player)
+    {
         _playerGO=player;
 
     }
 
-    public void Move(){
+    public void Move()
+    {
         if(Input.GetMouseButtonDown(0)){
             _clickPos=Input.mousePosition;
             Debug.Log(_clickPos);

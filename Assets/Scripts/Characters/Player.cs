@@ -10,10 +10,12 @@ public class Player :Squad
         _moveable = new PlayerMoveBehaviour(gameObject);
     }
     
-    private void Start() {
+    private void Start() 
+    {
         InitBehaviours();
     }
-    private void Update() {
+    private void Update() 
+    {
         _moveable.Move();
     }
 
