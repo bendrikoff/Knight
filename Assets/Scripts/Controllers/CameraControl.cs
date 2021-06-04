@@ -18,6 +18,7 @@ public class CameraControl : MonoBehaviour
         _input=gameObject.AddComponent(typeof(MouseInput)) as MouseInput;
     }
 
+    // HYI
 
     void Update()
     {
