@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player :Squad
+public class PlayerSquad :Squad
 {
-    
+    public override int Warriors{get;set;}
+
     protected override void InitBehaviours()
     {
-        _moveable = new PlayerMoveBehaviour(gameObject);
+
     }
     
     private void Start() 
@@ -16,7 +17,7 @@ public class Player :Squad
     }
     private void Update() 
     {
-        _moveable.Move();
+        
     }
 
 

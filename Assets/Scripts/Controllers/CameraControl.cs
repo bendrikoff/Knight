@@ -8,11 +8,14 @@ public class CameraControl : MonoBehaviour
 
     [SerializeField]private int _minZoom = 0;
     [SerializeField]private int _maxZoom=12000;
+    [SerializeField]private int _moveSens=100;
 
-    private bool _moveCamera;
+    private MouseInput _input;
+
     void Start()
     {
         _camera=GetComponent<Camera>();
+        _input=gameObject.AddComponent(typeof(MouseInput)) as MouseInput;
     }
 
 
@@ -22,23 +25,18 @@ public class CameraControl : MonoBehaviour
         Move();
     }
     public void Zoom(){
-        float mw = Input.GetAxis("Mouse ScrollWheel");
+        float mw = _input.Zoom;
         float newY = Mathf.Clamp(transform.position.y+mw*100,_minZoom,_maxZoom);
         if(mw!=0){
                transform.position=new Vector3(transform.position.x,newY,transform.position.z);
         }
     }
     public void Move(){
-        float posX = Input.GetAxis("Mouse X")*8;
-        float posY = Input.GetAxis("Mouse Y")*8;
-        if(Input.GetMouseButtonDown(0)){
-            _moveCamera=true;
+        float posX = _input.MouseX;
+        float posY = _input.MouseY;
+        if(Input.GetMouseButton(0)){
+            _camera.transform.position-= new Vector3(posX*_moveSens,0,posY*_moveSens);
         }
-        if(_moveCamera){
-            _camera.transform.position-= new Vector3(posX,0,posY);
-        }
-        if(Input.GetMouseButtonUp(0)){
-             _moveCamera=false;
-        }
+
     }
 }

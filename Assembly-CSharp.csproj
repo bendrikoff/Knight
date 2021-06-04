@@ -55,12 +55,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Characters\EntityMoveBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\IDialog.cs" />
      <Compile Include="Assets\Scripts\Characters\IMoveable.cs" />
-     <Compile Include="Assets\Scripts\Characters\Player.cs" />
-     <Compile Include="Assets\Scripts\Characters\PlayerMoveBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\KingMoveBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\KingSquad.cs" />
+     <Compile Include="Assets\Scripts\Characters\PlayerSquad.cs" />
+     <Compile Include="Assets\Scripts\Characters\Relation.cs" />
      <Compile Include="Assets\Scripts\Characters\Squad.cs" />
-     <Compile Include="Assets\Scripts\UI\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MouseInput.cs" />
+     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/admin/Knight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

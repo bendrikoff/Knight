@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntityMoveBehaviour : MonoBehaviour,IMoveable
+public class KingMoveBehaviour : MonoBehaviour,IMoveable
 {
-<<<<<<< HEAD
+
     public void Move()
     {
-=======
-    public void Move(){
-
->>>>>>> master
     }
+
 }
