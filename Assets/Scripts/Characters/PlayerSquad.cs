@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerSquad :Squad
 {
     public override int Warriors{get;set;}
+    public override int Speed{get;protected set;}
+    public override Army Army { get; set; }
+
 
     protected override void InitBehaviours()
     {
@@ -14,6 +17,7 @@ public class PlayerSquad :Squad
     private void Start() 
     {
         InitBehaviours();
+        Army = GetComponent<Army>();
     }
     private void Update() 
     {

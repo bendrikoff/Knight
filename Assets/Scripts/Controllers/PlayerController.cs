@@ -34,16 +34,24 @@ public class PlayerController : MonoBehaviour
 
     private void ReadInput()
     {
-        if(Input.GetMouseButtonDown(0))
+
+
+        // var _startClickPos = _input.MousePos;
+
+        if(Input.GetMouseButtonUp(0))
         {
+            // print(_startClickPos);
+            // print(_clickPos);
+
             _clickPos=_input.MousePos;
-            Ray _ray = _camera.ScreenPointToRay(_clickPos);
+            Ray ray = _camera.ScreenPointToRay(_clickPos);
             RaycastHit hit;
 
-            if (Physics.Raycast(_ray, out hit))
+            if (Physics.Raycast(ray, out hit))
             _destinationPoint = hit.point;
 
-            transform.LookAt(_destinationPoint);
+           //transform.LookAt( new Vector3(0,_destinationPoint.y,_destinationPoint.z));
+             transform.LookAt( _destinationPoint);
             
         }
               
