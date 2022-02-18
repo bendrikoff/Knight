@@ -2,9 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <_TargetFrameworkDirectories>non_empty_path_generated_by_unity.rider.package</_TargetFrameworkDirectories>
-    <_FullFrameworkReferenceAssemblyPaths>non_empty_path_generated_by_unity.rider.package</_FullFrameworkReferenceAssemblyPaths>
-    <DisableHandlePackageFileConflicts>true</DisableHandlePackageFileConflicts>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.4f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -56,13 +55,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Characters\BattleLosses.cs" />
+     <Compile Include="Assets\Scripts\Characters\City\City.cs" />
+     <Compile Include="Assets\Scripts\Characters\Factory.cs" />
+     <Compile Include="Assets\Scripts\Characters\FactoryTypes.cs" />
+     <Compile Include="Assets\Scripts\Characters\HungryManger.cs" />
      <Compile Include="Assets\Scripts\Characters\King\Army.cs" />
      <Compile Include="Assets\Scripts\Characters\King\ArmyStats.cs" />
      <Compile Include="Assets\Scripts\Characters\King\BattleManager.cs" />
-     <Compile Include="Assets\Scripts\Characters\King\EnemyDialogBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\King\GeneralArmyStats.cs" />
      <Compile Include="Assets\Scripts\Characters\King\IDialog.cs" />
      <Compile Include="Assets\Scripts\Characters\King\IMoveable.cs" />
+     <Compile Include="Assets\Scripts\Characters\King\KingDialogBehaviour.cs" />
      <Compile Include="Assets\Scripts\Characters\King\KingMoveBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\King\KingSettings.cs" />
      <Compile Include="Assets\Scripts\Characters\King\KingSquad.cs" />
      <Compile Include="Assets\Scripts\Characters\King\Relation.cs" />
      <Compile Include="Assets\Scripts\Characters\King\RelationManager.cs" />
@@ -70,12 +76,24 @@
      <Compile Include="Assets\Scripts\Characters\King\StateMachine\BaseState.cs" />
      <Compile Include="Assets\Scripts\Characters\King\StateMachine\ChaseState.cs" />
      <Compile Include="Assets\Scripts\Characters\King\StateMachine\IdleState.cs" />
+     <Compile Include="Assets\Scripts\Characters\King\StateMachine\RunState.cs" />
      <Compile Include="Assets\Scripts\Characters\King\StateMachine\StateManager.cs" />
      <Compile Include="Assets\Scripts\Characters\King\StateMachine\WalkState.cs" />
+     <Compile Include="Assets\Scripts\Characters\MoneyManger.cs" />
+     <Compile Include="Assets\Scripts\Characters\PlayerArmy.cs" />
+     <Compile Include="Assets\Scripts\Characters\PlayerBattleManager.cs" />
+     <Compile Include="Assets\Scripts\Characters\PlayerDialogBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Characters\PlayerFactoryManager.cs" />
      <Compile Include="Assets\Scripts\Characters\PlayerSquad.cs" />
+     <Compile Include="Assets\Scripts\Characters\TimeManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Controllers\MouseInput.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\UI\DialogPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\EventsMessages.cs" />
+     <Compile Include="Assets\Scripts\UI\MenuPanel.cs" />
+     <Compile Include="Assets\Scripts\UI\ResoursesPan.cs" />
+     <Compile Include="Assets\Scripts\UI\SquadPanel.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/admin/Knight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
