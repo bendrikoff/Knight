@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 _destinationPoint;
     private Vector3 _currentPoint => transform.position;
 
+    private GameObject _targetGO;
+
 
     private void Start() {  
         _camera=Camera.main;
@@ -48,9 +50,19 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))
-            _destinationPoint = hit.point;
+            {
 
-           //transform.LookAt( new Vector3(0,_destinationPoint.y,_destinationPoint.z));
+                if (hit.transform.gameObject.GetComponent<Squad>())
+                {
+                    _destinationPoint = hit.transform.position;
+                }
+                else
+                {
+                    _destinationPoint = hit.point;
+                }
+            }
+
+            //transform.LookAt( new Vector3(0,_destinationPoint.y,_destinationPoint.z));
              transform.LookAt( _destinationPoint);
             
         }
